@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { Calendar } from '../calendar/calendar';
+import { Component, OnInit, signal } from '@angular/core';
+import { Calendar } from '../../common/calendar/calendar';
 
 @Component({
   selector: 'journal-main',
@@ -8,6 +8,10 @@ import { Calendar } from '../calendar/calendar';
   styleUrl: './journal-main.less',
   standalone: true
 })
-export class JournalMain {
-  public date = signal('febuary rules')
+export class JournalMain implements OnInit {
+  public date = signal(new Date());
+
+  public ngOnInit(): void {
+
+  }
 }

@@ -1,0 +1,9 @@
+<p>calendar works!</p>
+<div>Month: {{selectedDate().getMonth()}}</div>
+<div>Days: {{numOfDaysInCurrentMonth()}}</div>
+<div>
+<div>
+@for (day of dayEntities(); track day.dayOfMonth) {
+<div>{{ day.dayOfMonth }}</div>
+} 
+
